@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MemoryGame</string>
+    <string name="take_picture">Take picture</string>
+    <string name="add_to_db">Add to DB</string>
+    <string name="show_history">Show history</string>
+    <string name="clear_history">Clear history</string>
+    <string name="play">Play</string>
+</resources>
