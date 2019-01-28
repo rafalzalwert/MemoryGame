@@ -2,13 +2,13 @@ package com.example.zalwe.memorygame;
 
 public class Image {
 
-    byte[] image;
+    private byte[] img;
 
     Image(byte[] image) {
-        this.image = image;
+        this.img = image;
     }
 
     public byte[] getImage() {
-        return image;
+        return img;
     }
 }

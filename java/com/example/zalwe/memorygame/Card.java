@@ -25,7 +25,7 @@ public class Card extends AppCompatButton {
         GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams(GridLayout.spec(rows),
                 GridLayout.spec(cloumns));
         layoutParams.width = (int) getResources().getDisplayMetrics().density * 100;
-        layoutParams.height = (int) getResources().getDisplayMetrics().density * 100;
+        layoutParams.height = (int) getResources().getDisplayMetrics().density * 150;
         setLayoutParams(layoutParams);
     }
 
@@ -42,11 +42,11 @@ public class Card extends AppCompatButton {
         return front;
     }
 
-    public void setFront(Image image) {
+    public void setDefaulImage(Image image) {
         front = image;
     }
 
-    void flip() {
+    void reverse() {
         if(isMatching) {
             return;
         }

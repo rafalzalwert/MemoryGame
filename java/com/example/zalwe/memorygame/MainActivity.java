@@ -18,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
     public static final String SIZE = "MainActivity.SIZE";
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
-    Button buttonTakePicture,buttonAdd,buttonHistory,buttonPlay;
+    Button buttonTakePicture;
+    Button buttonAdd;
+    Button buttonHistory;
+    Button buttonPlay;
     ImageView imageView;
     List<Image> imageArrayList;
     @Override

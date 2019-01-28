@@ -34,18 +34,15 @@ public class HistoryAdapter extends ArrayAdapter<Image>{
 
         byte[] img = getItem(position).getImage();
         Image image = new Image(img);
-        View view;
         ViewHolder viewHolder;
         if(convertView == null){
             LayoutInflater layoutInflater = LayoutInflater.from(context);
             convertView = layoutInflater.inflate(resource,parent,false);
             viewHolder = new ViewHolder();
             viewHolder.imageView = convertView.findViewById(R.id.icon);
-            view =convertView;
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) convertView.getTag();
-            view =convertView;
         }
         viewHolder.imageView.setImageBitmap(BitmapFactory.decodeByteArray(image.getImage(),
                 0,image.getImage().length ));

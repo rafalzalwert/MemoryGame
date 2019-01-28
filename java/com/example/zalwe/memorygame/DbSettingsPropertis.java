@@ -13,7 +13,7 @@ final class DbSettingsPropertis {
         }
 
         static final String TABLE_NAME = "images";
-        static final String _ID = "id";
+        static final String ID = "id";
         static final String COLUMN_NAME = "image";
 
 

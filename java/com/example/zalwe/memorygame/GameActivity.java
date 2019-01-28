@@ -17,7 +17,8 @@ import java.util.List;
 public class GameActivity extends AppCompatActivity implements View.OnClickListener{
 
     private GridLayout gridLayout;
-    private int size,numbersOfButtons;
+    private int size;
+    private int numbersOfButtons;
     private Card[] cards;
     private Card selectedCard;
     private Card secondSelectedCard;
@@ -63,7 +64,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         Collections.shuffle(imageList);
 
         for (int n = 0; n<numbersOfButtons; n++){
-            cards[n].setFront(imageList.get(n));
+            cards[n].setDefaulImage(imageList.get(n));
         }
     }
     @Override
@@ -80,7 +81,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         if(selectedCard == null) {
             selectedCard = card;
-            selectedCard.flip();
+            selectedCard.reverse();
             return;
         }
 
@@ -99,7 +100,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void pairFound(Card card) {
-        card.flip();
+        card.reverse();
 
         card.setMatched();
         selectedCard.setMatched();
@@ -112,14 +113,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     private void pairNotFound(Card card) {
         secondSelectedCard = card;
-        secondSelectedCard.flip();
+        secondSelectedCard.reverse();
         isBusy = true;
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                secondSelectedCard.flip();
-                selectedCard.flip();
+                secondSelectedCard.reverse();
+                selectedCard.reverse();
                 secondSelectedCard = null;
                 selectedCard = null;
                 isBusy = false;
