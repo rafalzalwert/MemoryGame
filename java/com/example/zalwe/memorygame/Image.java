@@ -4,7 +4,7 @@ public class Image {
 
     byte[] image;
 
-    public Image(byte[] image) {
+    Image(byte[] image) {
         this.image = image;
     }
 

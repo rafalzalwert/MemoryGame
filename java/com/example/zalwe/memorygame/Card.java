@@ -24,8 +24,8 @@ public class Card extends AppCompatButton {
 
         GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams(GridLayout.spec(rows),
                 GridLayout.spec(cloumns));
-        layoutParams.width = (int) getResources().getDisplayMetrics().density * 70;
-        layoutParams.height = (int) getResources().getDisplayMetrics().density * 70;
+        layoutParams.width = (int) getResources().getDisplayMetrics().density * 100;
+        layoutParams.height = (int) getResources().getDisplayMetrics().density * 100;
         setLayoutParams(layoutParams);
     }
 

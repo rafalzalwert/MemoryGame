@@ -24,7 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameActivity" />
+        <activity android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden" android:name=".GameActivity" />
+
         <activity android:name=".HistoryActivity" />
     </application>
 
